@@ -1,10 +1,11 @@
+import Title from '../Shared/Title/Title';
+import { HiCheckBadge } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 import AboutImage from './AboutImage';
-import Title from '../../shared/titel';
 
-const AboutMe = () => {
+const About = () => {
   return (
-    <div className="max-w-7xl mx-auto" id="aboutUs">
+    <div className="max-w-7xl mx-auto mt-10" id="aboutUs">
       <section className="flex items-center xl:h-screen">
         <div className="justify-center flex-1 ">
           <div className="px-4 mb-10 md:text-center">
@@ -29,18 +30,18 @@ const AboutMe = () => {
             >
               <h2 className="py-3 mb-4 text-2xl font-bold">So,Who Am I?</h2>
               <p className="mb-4/90 font-thin mb-10">
-                I'm a Front-end Developer with a strong passion for mastering
-                the MERN stack. Despite pursuing Zoology in undergrad, my true
-                love is software development. Recently, I completed a complete
-                web development course at Programming Hero and now, I'm actively
-                exploring job or internship opportunities to apply and further
-                grow my expertise in a professional setting.
+                I’m a passionate Frontend Developer with a strong interest in
+                mastering the MERN stack. I enjoy building dynamic and engaging
+                user experiences, solving complex problems, and exploring modern
+                web technologies. My journey in web development started with
+                Programming Hero, where I completed an extensive training
+                program that fueled my passion for coding.
               </p>
               <div className="grid grid-cols-2 gap-10">
                 <div>
                   <h6 className="font-bold">Email</h6>
                   <p className="md:text-sm text-xs font-thin text-white/80">
-                    ahmedshanto690@gmail.com
+                    yasinbokthtawhid@gmail.com
                   </p>
                 </div>
                 <div>
@@ -52,7 +53,7 @@ const AboutMe = () => {
                 <div>
                   <h6 className="font-bold">Passion</h6>
                   <p className="md:text-sm text-xs font-thin text-white/80">
-                    Traveling & Hiking
+                    Traveling & Reading Books
                   </p>
                 </div>
                 <div>
@@ -69,4 +70,4 @@ const AboutMe = () => {
     </div>
   );
 };
-export default AboutMe;
+export default About;

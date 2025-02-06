@@ -1,24 +1,84 @@
+import Title from '../../Shared/Title/Title';
 import { motion } from 'framer-motion';
-import contactlottie from '../assets/contactlottie.json';
+import contactlottie from '../../../assets/contactlottie.json';
 import Lottie from 'lottie-react';
 import { AwesomeButton } from 'react-awesome-button';
 import { RiSendPlaneFill } from 'react-icons/ri';
-import Title from '../shared/titel';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
+import { toast } from 'react-toastify';
 
-const Contact = () => {
+const ContactUs = () => {
+  const form = useRef();
+  const sendEmail = e => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        'service_jkb6g9m',
+        'template_yynmrfi',
+        form.current,
+        'XX_rthWuRlfe41v_b'
+      )
+      .then(
+        result => {
+          if (result.text == 'OK') {
+            form.current.reset();
+            return toast.success('Email sent successfully!');
+          }
+        },
+        error => {
+          toast.error('ERROR:', error.text);
+        }
+      );
+  };
+
   return (
     <section class="pt-52 mx-auto" id="contactUs">
       <div className="w-fit mx-auto mb-16">
         <Title>Contact Me</Title>
       </div>
-      <div className="flex lg:flex-row flex-col justify-center items-center max-w-6xl mx-auto">
+      <div className="flex lg:flex-row gap-16 flex-col justify-center items-center max-w-6xl mx-auto">
         <motion.div
           initial={{ x: -150, opacity: 0 }}
           whileInView={{ x: 1, opacity: 1 }}
           transition={{ duration: 1 }}
           className="text-white flex-1"
         >
-          <Lottie animationData={contactlottie} className=" max-w-xl"></Lottie>
+          <section class="contact-info p-6 bg-gray-900 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-4 text-center text-white">
+              Contact Information
+            </h2>
+            <ul class="space-y-4">
+              <li class="contact-item text-lg hover:scale-105 transform transition duration-300 ease-in-out">
+                <strong>Email: </strong>
+                <a
+                  href="mailto:yasinbokthtawhid@gmail.com"
+                  class="text-blue-500 hover:text-blue-700"
+                >
+                  yasinbokthtawhid@gmail.com
+                </a>
+              </li>
+              <li class="contact-item text-lg hover:scale-105 transform transition duration-300 ease-in-out">
+                <strong>Phone: </strong>
+                <a
+                  href="tel:+8801307664940"
+                  class="text-blue-500 hover:text-blue-700"
+                >
+                  +8801307664940
+                </a>
+              </li>
+              <li class="contact-item text-lg hover:scale-105 transform transition duration-300 ease-in-out">
+                <strong>WhatsApp: </strong>
+                <a
+                  href="https://wa.me/1307664940"
+                  target="_blank"
+                  class="text-blue-500 hover:text-blue-700"
+                >
+                  +8801307664940
+                </a>
+              </li>
+            </ul>
+          </section>
         </motion.div>
         <motion.div
           initial={{ x: 150, opacity: 0 }}
@@ -26,7 +86,7 @@ const Contact = () => {
           transition={{ duration: 1 }}
           className="flex-1 md:w-3/4 w-full"
         >
-          <form class="space-y-8">
+          <form class="space-y-8" ref={form} onSubmit={sendEmail}>
             <div className="">
               <label
                 for="Name"
@@ -85,4 +145,4 @@ const Contact = () => {
     </section>
   );
 };
-export default Contact;
+export default ContactUs;

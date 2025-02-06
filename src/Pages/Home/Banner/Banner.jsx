@@ -1,3 +1,4 @@
+import Title from '../../Shared/Title/Title';
 import { motion } from 'framer-motion';
 import SplitTextJS from 'split-text-js';
 import gsap from 'gsap';
@@ -11,7 +12,6 @@ import { FaCloudDownloadAlt } from 'react-icons/fa';
 import github from '../../../assets/github.json';
 import linkedin from '../../../assets/linkedin.json';
 import facebook from '../../../assets/facebook.json';
-import Title from '../../../shared/titel';
 
 const Banner = () => {
   useEffect(() => {
@@ -43,7 +43,7 @@ const Banner = () => {
   });
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row min-h-screen justify-center items-center gap-8 px-5 lg:px-20 py-10">
+    <div className="flex flex-col-reverse lg:flex-row min-h-screen justify-center items-center 2xl:pt-0 lg:pt-0 pt-20 gap-5">
       <motion.div
         className="mt-20 "
         initial={{ x: -150, opacity: 0 }}
@@ -51,7 +51,8 @@ const Banner = () => {
         transition={{ duration: 1 }}
       >
         <Title>
-          Hi! <br /> I'm Tawhid Ahmed Shanto
+          {' '}
+          Hi! <br /> I'm Yasin Bokth Tawhid
         </Title>
         <p className="absolute text-2xl font-bold text-white mt-4">I'm a </p>
         <div className="text-wrapper mt-3.5">
@@ -71,7 +72,7 @@ const Banner = () => {
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            href="https://github.com/shantodeveloper"
+            href="https://github.com/tawhidbokth"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -81,7 +82,7 @@ const Banner = () => {
             whileHover={{ scale: 1.3 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            href="https://www.linkedin.com/in/tawhid-ahmed-375094225/"
+            href="https://www.linkedin.com/in/yasin-bokth-tawhid/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -91,17 +92,17 @@ const Banner = () => {
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            href="https://www.facebook.com/freelancershanto19"
+            href="https://www.facebook.com/AkibIshak"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Lottie animationData={facebook} className="w-7 cursor-pointer" />
           </motion.a>
         </div>
+
         <a
-          href="https://docs.google.com/document/d/1wgibCU4eAs6up_K7DmHDEJs7d2l_Nv32fDn8OjqwskY/edit?tab=t.0"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://www.dropbox.com/scl/fi/g9evigs5abu4x8ia0cxgb/Ishak-Qureshee-Akib-Resume.pdf?rlkey=3lymxenn2o6d9jitnwczez40k&dl=1"
+          download
         >
           <AwesomeButton
             type="primary"
