@@ -11,7 +11,7 @@ import 'react-awesome-button/dist/styles.css';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
 import github from '../../../assets/github.json';
 import linkedin from '../../../assets/linkedin.json';
-import facebook from '../../../assets/facebook.json';
+
 
 const Banner = () => {
   useEffect(() => {
@@ -88,20 +88,13 @@ const Banner = () => {
           >
             <Lottie animationData={linkedin} className="w-7 cursor-pointer" />
           </motion.a>
-          <motion.a
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.3 }}
-            href="https://www.facebook.com/AkibIshak"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Lottie animationData={facebook} className="w-7 cursor-pointer" />
-          </motion.a>
         </div>
 
         <a
-          href="https://www.dropbox.com/scl/fi/g9evigs5abu4x8ia0cxgb/Ishak-Qureshee-Akib-Resume.pdf?rlkey=3lymxenn2o6d9jitnwczez40k&dl=1"
+        
+          href="https://drive.google.com/file/d/1eD1IRR5mWHtkUOAFsQ2Sgunb4Q9ORUCT/view"
+          target="_blank"
+         rel="noopener noreferrer"
           download
         >
           <AwesomeButton

@@ -11,18 +11,16 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      name: 'Career Counseling',
+      name: 'Employee Portal',
       description:
         'A modern platform designed for seamless career guidance and counseling.',
-      details: `Career Counseling is a modern matrimony platform designed for seamless connections.
-        With a user-friendly interface and advanced features, Career Counseling simplifies the search for the perfect life partner.`,
-      features: [
-        'Users can add and find Counseling for a perfect match, and request contact information by paying a fee by Stripe.',
-        'Created different user-friendly interfaces based on their roles, like admins and regular users.',
-        'Allow users to filter counseling based on location, age, and gender.',
-      ],
-      liveSite: 'https://carrer-counsiling.web.app/',
-      image: 'https://i.ibb.co.com/86KSV5Q/career-counsiling.png',
+      details: `A comprehensive employee management system for HR and Admin to streamline employee data handling, task monitoring, payroll, and authentication. Built with React, Firebase, and Node.js.`,
+      challenges: 'Managing jwt token and higest security.',
+      technologies: 'React, Firebase, Tailwind CSS Backend: Node.js, Express.js',
+      futurePlans: 'Implementing payment getway system.',
+      liveSite: 'https://employeemanagement01.netlify.app/',
+      github: 'https://github.com/tawhidbokth/-Employee-management-client.git',
+      image: 'https://i.ibb.co.com/zhNqbkHP/Untitled-design.png',
     },
     {
       id: 2,
@@ -31,12 +29,11 @@ const Projects = () => {
         'A platform for equipment sharing and surplus reduction among users.',
       details: `Sports Equipment is a Community Equipment Sharing and Surplus Reduction Platform.
         It offers a user-friendly interface where users can view their sports equipment and request history, manage their profile, and track ongoing requests.`,
-      features: [
-        'Empower users to add surplus sports equipment for add, edit, or delete their listings as needed.',
-        'Allow users to request sports equipment, view all equipment, and cancel their request if the status is pending.',
-        'Donors can view and mark all sports equipment as delivered on the platform.',
-      ],
+      technologies: 'React, Firebase, Tailwind CSS Backend: Node.js, Express.js',
+      challenges: 'Managing real-time inventory and user-to-user transactions.',
+      futurePlans: 'Implementing blockchain-based ownership tracking.',
       liveSite: 'https://sprots-enquipment.web.app/',
+       github: 'https://github.com/tawhidbokth/sports-equipment-clint.git ',
       image: 'https://i.ibb.co.com/0y6syKQ/sports-equipment.png',
     },
     {
@@ -44,12 +41,11 @@ const Projects = () => {
       name: 'Restaurant Management',
       description: 'A project for managing a wide array of foods and orders.',
       details: `Restaurant Management is a project where users can see a wide array of foods from leading global brands. Visitors can easily browse and explore a diverse selection of foods.`,
-      features: [
-        'Users can add foods with specific details and explore foods based on their brand names.',
-        'View food details, add to cart, and easily manage added foods in cart.',
-        'Responsive design across various devices.',
-      ],
+      technologies: 'React, Firebase, Tailwind CSS Backend: Node.js, Express.js',
+      challenges: 'Optimizing order processing speed and database queries.',
+      futurePlans: 'Adding AI-based order recommendations and analytics.',
       liveSite: 'https://restaurant-management-we-d57a4.web.app/',
+      github: 'https://github.com/tawhidbokth/restaurant-management-clint.git ',
       image: 'https://i.ibb.co.com/MRGrqsX/restrurant.png',
     },
   ];
@@ -100,9 +96,22 @@ const Projects = () => {
             <p className="mb-4">{selectedProject.details}</p>
             <h3 className="font-bold mb-2">Core Features:</h3>
             <ul className="list-disc pl-5 mb-4">
-              {selectedProject.features.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
+              <div className="bg-gray-700 p-4 rounded-lg mb-4 shadow-md">
+          <h3 className="text-xl font-semibold text-blue-300">Technologies</h3>
+          <p className="text-gray-300">{selectedProject.technologies}</p>
+        </div>
+
+        <div className="bg-gray-700 p-4 rounded-lg mb-4 shadow-md">
+          <h3 className="text-xl font-semibold text-red-300">
+            Challenges Faced
+          </h3>
+          <p className="text-gray-300">{selectedProject.challenges}</p>
+        </div>
+
+        <div className="bg-gray-700 p-4 rounded-lg mb-6 shadow-md">
+          <h3 className="text-xl font-semibold text-green-300">Future Plans</h3>
+          <p className="text-gray-300">{selectedProject.futurePlans}</p>
+        </div>
             </ul>
             <div className="flex flex-wrap gap-4">
               <a
@@ -114,7 +123,7 @@ const Projects = () => {
                 Live Site
               </a>
               <a
-                href={selectedProject.liveSite}
+                href={selectedProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md text-sm"
