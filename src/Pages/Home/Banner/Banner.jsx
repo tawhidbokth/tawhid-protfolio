@@ -12,7 +12,6 @@ import { FaCloudDownloadAlt } from 'react-icons/fa';
 import github from '../../../assets/github.json';
 import linkedin from '../../../assets/linkedin.json';
 
-
 const Banner = () => {
   useEffect(() => {
     const titles = gsap.utils.toArray('h5');
@@ -91,10 +90,9 @@ const Banner = () => {
         </div>
 
         <a
-        
-          href="https://drive.google.com/file/d/1eD1IRR5mWHtkUOAFsQ2Sgunb4Q9ORUCT/view"
+          href="https://drive.google.com/file/d/1NKeXcgvM_iEGVVvk7biWCX3TkMGAcItO/view?usp=sharing"
           target="_blank"
-         rel="noopener noreferrer"
+          rel="noopener noreferrer"
           download
         >
           <AwesomeButton

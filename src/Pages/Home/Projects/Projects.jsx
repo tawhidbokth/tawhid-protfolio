@@ -16,7 +16,8 @@ const Projects = () => {
         'A modern platform designed for seamless career guidance and counseling.',
       details: `A comprehensive employee management system for HR and Admin to streamline employee data handling, task monitoring, payroll, and authentication. Built with React, Firebase, and Node.js.`,
       challenges: 'Managing jwt token and higest security.',
-      technologies: 'React, Firebase, Tailwind CSS Backend: Node.js, Express.js',
+      technologies:
+        'React, Firebase, Tailwind CSS Backend: Node.js, Express.js',
       futurePlans: 'Implementing payment getway system.',
       liveSite: 'https://employeemanagement01.netlify.app/',
       github: 'https://github.com/tawhidbokth/-Employee-management-client.git',
@@ -29,11 +30,12 @@ const Projects = () => {
         'A platform for equipment sharing and surplus reduction among users.',
       details: `Sports Equipment is a Community Equipment Sharing and Surplus Reduction Platform.
         It offers a user-friendly interface where users can view their sports equipment and request history, manage their profile, and track ongoing requests.`,
-      technologies: 'React, Firebase, Tailwind CSS Backend: Node.js, Express.js',
+      technologies:
+        'React, Firebase, Tailwind CSS Backend: Node.js, Express.js',
       challenges: 'Managing real-time inventory and user-to-user transactions.',
       futurePlans: 'Implementing blockchain-based ownership tracking.',
       liveSite: 'https://sprots-enquipment.web.app/',
-       github: 'https://github.com/tawhidbokth/sports-equipment-clint.git ',
+      github: 'https://github.com/tawhidbokth/sports-equipment-clint.git ',
       image: 'https://i.ibb.co.com/0y6syKQ/sports-equipment.png',
     },
     {
@@ -41,12 +43,31 @@ const Projects = () => {
       name: 'Restaurant Management',
       description: 'A project for managing a wide array of foods and orders.',
       details: `Restaurant Management is a project where users can see a wide array of foods from leading global brands. Visitors can easily browse and explore a diverse selection of foods.`,
-      technologies: 'React, Firebase, Tailwind CSS Backend: Node.js, Express.js',
+      technologies:
+        'React, Firebase, Tailwind CSS Backend: Node.js, Express.js',
       challenges: 'Optimizing order processing speed and database queries.',
       futurePlans: 'Adding AI-based order recommendations and analytics.',
       liveSite: 'https://restaurant-management-we-d57a4.web.app/',
       github: 'https://github.com/tawhidbokth/restaurant-management-clint.git ',
       image: 'https://i.ibb.co.com/MRGrqsX/restrurant.png',
+    },
+
+    {
+      id: 4,
+      name: '🛠 Team Project: Food Delivery Website',
+      description: 'A project for managing a wide array of foods and orders.',
+      details:
+        'A full-stack food delivery platform where restaurant owners can manage food items, customers can place orders and leave reviews, and riders can deliver orders. The project includes secure payment integration (SSLCommerz), role-based access, and responsive UI built with React and Tailwind CSS.',
+      technologies:
+        'React.js, Tailwind CSS, Node.js, Express.js, MongoDB (Mongoose), Firebase Auth, SSLCommerz',
+      challenges:
+        'Handling dynamic food management and order status updates in real-time Ensuring responsive UI and consistent user experience across all pages ',
+      futurePlans: 'real world deployment and adding more features.',
+      liveSite: 'https://tastyride-cd1a3.web.app/',
+      client: 'https://github.com/safin33221/TastyRide-Client-Side',
+      server: 'https://github.com/safin33221/TastyRide-Server-Side#',
+      image:
+        'https://i.ibb.co.com/zTqB6z8d/Chat-GPT-Image-May-5-2025-10-47-22-PM.png',
     },
   ];
 
@@ -97,21 +118,25 @@ const Projects = () => {
             <h3 className="font-bold mb-2">Core Features:</h3>
             <ul className="list-disc pl-5 mb-4">
               <div className="bg-gray-700 p-4 rounded-lg mb-4 shadow-md">
-          <h3 className="text-xl font-semibold text-blue-300">Technologies</h3>
-          <p className="text-gray-300">{selectedProject.technologies}</p>
-        </div>
+                <h3 className="text-xl font-semibold text-blue-300">
+                  Technologies
+                </h3>
+                <p className="text-gray-300">{selectedProject.technologies}</p>
+              </div>
 
-        <div className="bg-gray-700 p-4 rounded-lg mb-4 shadow-md">
-          <h3 className="text-xl font-semibold text-red-300">
-            Challenges Faced
-          </h3>
-          <p className="text-gray-300">{selectedProject.challenges}</p>
-        </div>
+              <div className="bg-gray-700 p-4 rounded-lg mb-4 shadow-md">
+                <h3 className="text-xl font-semibold text-red-300">
+                  Challenges Faced
+                </h3>
+                <p className="text-gray-300">{selectedProject.challenges}</p>
+              </div>
 
-        <div className="bg-gray-700 p-4 rounded-lg mb-6 shadow-md">
-          <h3 className="text-xl font-semibold text-green-300">Future Plans</h3>
-          <p className="text-gray-300">{selectedProject.futurePlans}</p>
-        </div>
+              <div className="bg-gray-700 p-4 rounded-lg mb-6 shadow-md">
+                <h3 className="text-xl font-semibold text-green-300">
+                  Future Plans
+                </h3>
+                <p className="text-gray-300">{selectedProject.futurePlans}</p>
+              </div>
             </ul>
             <div className="flex flex-wrap gap-4">
               <a
@@ -123,12 +148,21 @@ const Projects = () => {
                 Live Site
               </a>
               <a
-                href={selectedProject.github}
+                href={selectedProject.client}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md text-sm"
               >
-                Github
+                Client-side
+              </a>
+
+              <a
+                href={selectedProject.server}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md text-sm"
+              >
+                Server-side
               </a>
               <button
                 onClick={handleCloseModal}

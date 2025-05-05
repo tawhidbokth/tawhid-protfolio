@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #03305d;
+  background-color: black;
 }
 
 .container {
@@ -39,6 +39,7 @@
   z-index: 3;
   animation: moveUp 1.5s ease-in-out 1;
   background-color: #03305d;
+  background: linear-gradient(180deg, #03305d 52.5%, #fff 52.5%);
 }
 
 .lower {
