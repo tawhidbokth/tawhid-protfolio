@@ -90,7 +90,7 @@ const Banner = () => {
         </div>
 
         <a
-          href="https://drive.google.com/file/d/1NKeXcgvM_iEGVVvk7biWCX3TkMGAcItO/view?usp=sharing"
+          href="https://drive.google.com/file/d/1s2jsVlbRJX9N99C-AKjJqXJ7q5-5N4PQ/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           download

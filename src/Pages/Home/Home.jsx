@@ -1,5 +1,6 @@
 import Navbar from '../../Components/Navbar/Navbar';
 import About from '../About/About';
+import Certificates from '../Certificate/Certificates';
 import OtherSkils from '../OthersSkils/OtherSkils';
 import Banner from './Banner/Banner';
 import ContactUs from './ContactUs/ContactUs';
@@ -27,6 +28,7 @@ const Home = () => {
         <Projects></Projects>
         <MySkills></MySkills>
         <OtherSkils></OtherSkils>
+        <Certificates></Certificates>
         <ContactUs></ContactUs>
       </div>
     </div>
