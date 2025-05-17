@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Headroom from 'react-headroom';
 import { FaHome } from 'react-icons/fa';
-import { MdAlternateEmail } from 'react-icons/md';
+import { MdAlternateEmail, MdArchive } from 'react-icons/md';
 import { RiShareBoxLine } from 'react-icons/ri';
 import { BiUserCircle } from 'react-icons/bi'; // About icon
 import BurgerMenu from './BurgerMenu';
@@ -39,6 +39,13 @@ const Navbar = () => {
       title: 'Contact Me',
       link: '#contactUs',
       icon: <MdAlternateEmail />,
+    },
+
+    {
+      id: 5,
+      title: 'Certificates',
+      link: '#certificates',
+      icon: <MdArchive />,
     },
   ];
 

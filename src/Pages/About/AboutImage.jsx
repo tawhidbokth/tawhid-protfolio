@@ -5,7 +5,7 @@ const AboutImage = () => {
     <div>
       <img
         className="aboutImage"
-        src="https://i.ibb.co.com/xfS5Rfp/385490917-1510631689733100-2473354057220819702-n-LE-upscale-balanced-x4-removebg-preview-1-modified.png"
+        src="https://i.ibb.co/0VdRwKYg/1747030755900.jpg"
         alt="my image"
       ></img>
     </div>

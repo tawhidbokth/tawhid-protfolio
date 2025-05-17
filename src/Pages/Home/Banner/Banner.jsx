@@ -108,13 +108,15 @@ const Banner = () => {
         whileInView={{ x: 1, opacity: 1 }}
         transition={{ duration: 1 }}
       >
+        {/* https://i.ibb.co/xt7nHWNQ/1747031291039.jpg
+        https://i.ibb.co/0VdRwKYg/1747030755900.jpg */}
         <Lottie
           animationData={bloob}
           className="absolute xl:-bottom-24 -bottom-20 2xl:-left-52 xl:-left-28 md:-left-20 -left-14 2xl:w-[550px] w-[450px]"
         ></Lottie>
         <img
-          src="https://i.ibb.co.com/vmHtDT7/385490917-1510631689733100-2473354057220819702-n-LE-upscale-balanced-x4-removebg-preview.png"
-          className="2xl:max-w-sm max-w-xs sm:-left-5 relative lg:-left-4 xl:-left-10 2xl:-left-28 lg:-bottom-7 rounded-full"
+          src="https://i.ibb.co/xt7nHWNQ/1747031291039.jpg"
+          className="2xl:max-w-sm max-w-xs sm:-left-5 relative lg:-left-4 xl:-left-10 2xl:-left-28 lg:-bottom-7 rounded-full shadow-2xl shadow-black/30"
         />
       </motion.div>
     </div>
